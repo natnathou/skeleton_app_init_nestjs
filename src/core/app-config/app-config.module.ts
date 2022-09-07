@@ -7,6 +7,7 @@ import { finalConfig } from '../config';
 @Module({
     imports: [
         ConfigModule.forRoot({
+            envFilePath: `.env.${process.env.NODE_ENV}`,
             isGlobal: true,
             load: [finalConfig],
         }),
